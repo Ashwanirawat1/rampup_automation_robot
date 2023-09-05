@@ -9,7 +9,7 @@ B. RobotFramework  :- Steps to install pytest :-
 
 
 FOR EXECUTING PERTICULAR SCRIPT :- python -m robot Testcase\MODULENAME/test_FILENAME.robot
-Example :-   If we want to execute the generalSearch.py script.
+Example :-   If we want to execute the testcase1.robot script.
                             python -m robot TestCase\Module1_folder\testcase1.robot
 
 
