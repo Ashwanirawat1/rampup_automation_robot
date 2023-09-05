@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.11.4 on win32)" generated="20230905 10:49:01.110" rpa="false" schemaversion="3">
+<suite id="s1" name="Testcase1" source="C:\Users\Ashwani R-3309\PycharmProjects\Rampup_Automation\Framework\TestCase\Module2_folder\testcase1.robot">
+<test id="s1-t1" name="Validate Login Page" line="6">
+<kw name="Login OrangeHRM" library="loginPO">
+<kw name="OpenBrowse" library="common_keywords">
+<var>${pagetitle}</var>
+<arg>${orange_url}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${appurl}</arg>
+<arg>${appbrowser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230905 10:49:01.683" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20230905 10:49:01.682" endtime="20230905 10:49:06.890"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230905 10:49:06.890" endtime="20230905 10:49:07.009"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230905 10:49:07.019" level="INFO">${title} = OrangeHRM</msg>
+<status status="PASS" starttime="20230905 10:49:07.009" endtime="20230905 10:49:07.019"/>
+</kw>
+<msg timestamp="20230905 10:49:07.019" level="INFO">${pagetitle} = OrangeHRM</msg>
+<status status="PASS" starttime="20230905 10:49:01.681" endtime="20230905 10:49:07.019"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${pagetitle}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230905 10:49:07.019" endtime="20230905 10:49:07.020"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${pagetitle}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230905 10:49:07.020" level="INFO">OrangeHRM</msg>
+<status status="PASS" starttime="20230905 10:49:07.020" endtime="20230905 10:49:07.020"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5 second</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230905 10:49:07.020" endtime="20230905 10:49:07.022"/>
+</kw>
+<status status="PASS" starttime="20230905 10:49:01.681" endtime="20230905 10:49:07.022"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230905 10:49:10.023" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230905 10:49:07.022" endtime="20230905 10:49:10.023"/>
+</kw>
+<kw name="Enter Orange Email and Password" library="loginPO">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${orange_email}</arg>
+<arg>Admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230905 10:49:10.025" level="INFO">Typing text 'Admin' into text field 'xpath://input[@name='username']'.</msg>
+<status status="PASS" starttime="20230905 10:49:10.024" endtime="20230905 10:49:10.174"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${orange_password}</arg>
+<arg>admin123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230905 10:49:10.174" level="INFO">Typing text 'admin123' into text field 'xpath://input[@name='password']'.</msg>
+<status status="PASS" starttime="20230905 10:49:10.174" endtime="20230905 10:49:10.337"/>
+</kw>
+<status status="PASS" starttime="20230905 10:49:10.023" endtime="20230905 10:49:10.337"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230905 10:49:13.339" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230905 10:49:10.338" endtime="20230905 10:49:13.339"/>
+</kw>
+<kw name="Submit Orange Login" library="loginPO">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${orange_submit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230905 10:49:13.340" level="INFO">Clicking element 'xpath://button[@type='submit']'.</msg>
+<status status="PASS" starttime="20230905 10:49:13.340" endtime="20230905 10:49:14.621"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230905 10:49:18.623" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230905 10:49:14.621" endtime="20230905 10:49:18.623"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${orange}</var>
+<arg>${orange_dashboard}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230905 10:49:18.655" level="INFO">${orange} = Dashboard</msg>
+<status status="PASS" starttime="20230905 10:49:18.623" endtime="20230905 10:49:18.655"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${orange}</arg>
+<arg>${orange_text}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230905 10:49:18.655" endtime="20230905 10:49:18.655"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${demologin_msg}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230905 10:49:18.655" endtime="20230905 10:49:18.655"/>
+</kw>
+<status status="PASS" starttime="20230905 10:49:13.339" endtime="20230905 10:49:18.655"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230905 10:49:21.657" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230905 10:49:18.656" endtime="20230905 10:49:21.657"/>
+</kw>
+<status status="PASS" starttime="20230905 10:49:01.679" endtime="20230905 10:49:21.657"/>
+</test>
+<status status="PASS" starttime="20230905 10:49:01.113" endtime="20230905 10:49:21.660"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Testcase1">Testcase1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
